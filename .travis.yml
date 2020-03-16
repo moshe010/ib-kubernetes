@@ -3,6 +3,8 @@ language: go
 go:
   - "1.13"
 
+dist: bionic
+
 env:
   - IMAGE_NAME=mellanox/ib-kubernetes
 

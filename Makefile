@@ -66,7 +66,7 @@ $(BUILDDIR)/$(BINARY_NAME): $(GOFILES) | $(BUILDDIR)
 # Tools
 
 $(GOLINT): | $(BASE) ; $(info  building golangci-lint...)
-	$Q go get -u github.com/golangci/golangci-lint/cmd/golangci-lint
+	$Q curl -sSfL https://raw.githubusercontent.com/golangci/golangci-lint/master/install.sh | sh -s -- -b ${GOBIN} v1.23.8
 
 GOVERALLS = $(GOBIN)/goveralls
 $(GOBIN)/goveralls: | $(BASE) ; $(info  building goveralls...)
